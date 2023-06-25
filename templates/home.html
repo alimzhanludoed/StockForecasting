@@ -1,0 +1,19 @@
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="/static/index.css" /> 
+  <title>Home Page</title>
+</head>
+
+<div class="content">
+  <h1>FLASK APP RUNNING</h1>
+  <h2>Enter the stock symbol here</h2>
+  <form method="POST">
+    {# This hidden_tag is a CSRF security feature #}
+    {{ form.hidden_tag() }}
+    {{ form.stock.label }}: {{ form.stock }}
+    <br/>
+    <div class="divForButton">
+      {{ form.submit() }}
+    </div>
+  </form>
+</div>
